@@ -1,0 +1,156 @@
+.conter{
+    background: #f5f5f5;
+}
+.conter{
+    background-image: url("http://localhost/thu-nghiem/assets/images/bg-home.jpg");
+    background-repeat: no-repeat;
+    height: 600px;
+}
+.conter .container{
+    padding-top: 80px;
+    color: #fff;
+}
+.conter .description {
+    margin-top: 80px;
+}
+.conter .description ul li{
+    margin-top: 10px;
+    list-style-type: none;
+}
+.conter .description ul li i{
+    margin-right: 5px;
+}
+.conter .description ul li span{
+    color: #43a047;
+}
+.conter .description .button button{
+    background-color: #0b0b0b59;
+    padding: 7px;
+
+    border-radius: 5px;
+    border: 2px solid #f5f5f570;
+    margin-bottom: 30px;
+}
+
+.conter .description .btn-group1  {
+    margin-top: 35px;
+
+}
+.conter .description .btn-group1 a {
+
+    color: #fff;
+}
+
+.conter .description .btn-group1 .btn-group {
+    background-color: #46b8da;
+    height: 36px;
+    border-radius: 5px;
+    /* margin-right: -2px; */
+    margin-left: 5px;
+    text-align: center;
+    display: inline;
+    padding: 10px;
+}
+.conter .seach .seach1 {
+    display: inline-block;
+    background-color: #fff;
+    width: 86%;
+    border-radius: 7px;
+}
+
+.conter .seach .seach1  .khung{
+    background-color: #43a047;
+    width: 33px;
+    display: inline-block;
+    height: 16px;
+    margin-right: 24px;
+}
+.conter .seach .seach1  h2{
+    color: #43a047;
+}
+.conter .seach .seach1  {
+    display: inline-block;
+    background-color: #fff;
+    width: 86%;
+    border-radius: 7px;
+}
+.conter .seach .seach1 .row11 {
+
+    padding: 10px 30px 10px 30px;
+
+}
+.conter .seach .seach1 input {
+
+    background-color: #fff;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    margin-top: 10px;
+    height: 39px;
+    color: #0b0b0b;
+
+
+}
+
+.conter .seach .seach1  span input {
+
+    background-color: #fff;
+    width: 49.5%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+
+    height: 39px;
+
+}
+.conter .seach .seach1 .row4 input{
+
+    background-color: #43a047;
+    width: 48.5%;
+    border: none;
+    border-radius: 8px;
+    height: 48px;
+    float: left;
+
+}
+.conter .seach .seach1 .row4 {
+    color: #0b0b0b;
+    padding: 10px 30px 10px 30px;
+
+}
+
+.conter .seach .seach1  form p{
+    color: #e00800;
+
+
+}
+.conter .seach .seach1 .row4 .login-social {
+
+    float: left;
+    margin-bottom: 50px;
+    margin-top: 5px;
+    margin-left: 10px;
+
+}
+.conter .seach .seach1 .row4 .login-social .fa-facebook-square {
+
+    margin-top: -7px;
+    font-size: 26px;
+
+    color: #3b5998
+}
+.conter .seach .seach1 .row4 .login-social .fa-google-plus-square {
+
+    margin-top: -7px;
+    font-size: 26px;
+
+    color: #cc3323;
+}
+.conter .seach .text-justify  {
+
+
+
+    margin-top: 61px;
+    padding-left: 26px;
+    /* margin-left: 29px; */
+    width: 86%;
+}

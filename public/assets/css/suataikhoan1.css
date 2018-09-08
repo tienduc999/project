@@ -1,0 +1,95 @@
+.conter .container .asida .row{
+    margin: 10px 0 0 0 ;
+}
+.conter .container .asida .row{
+    margin: 10px 0 0 0 ;
+}
+.conter .container .row .sidebar{
+    border: 1px solid #999;
+    padding: 15px;
+    border-radius: 3px;
+    box-shadow: 0 1px 6px 1px rgba(0,0,0,.2);
+    background-color: #fff;
+
+
+}
+.container .asida .sidebar ul li i{
+    font-size: 5px;
+
+}
+.conter .container .row .sidebar ul li{
+    list-style-type: none;
+
+
+}
+.conter .container .row .sidebar label{
+    font-weight: normal;
+    font-size: 12px;
+
+
+}
+
+.conter .container .row .sidebar ul li strong{
+    color: #43a047;
+
+}
+.conter .container .row .sidebar ul li ul li{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #ccc;
+
+
+}
+.conter .container .row .sidebar ul li ul li i{
+    font-size: 9px;
+
+    padding-right: 10px;
+
+}
+
+.conter .sualoi{
+    padding: 10px;
+    border-bottom:1px solid #ccc ;
+}
+.conter .background-color{
+    background-color: #f5f5f5;
+}
+.conter .sualoi .breadcrum-line{
+    margin-left: 150px;
+    margin-right: 150px;
+}
+.conter .sualoi a{
+    padding: 10px;
+}
+.conter .container .asida img{
+    height: 180px;
+}
+.conter .container .asida .iteam-car{
+    background-color: #fff;
+    padding: 10px;
+    margin: 0;
+
+}
+.conter .container .asida .iteam-car p{
+    margin: 6px 0 30px;
+    font-size: 13px;
+}
+.conter .container .asida .tt input{
+
+    margin-bottom: 4px;
+    margin-top: 6px;
+    width: 70%;
+    height: 30px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+
+}
+.conter .container .asida .tt span{
+
+    color: #e41132;
+
+
+}
+.conter .container .asida .tt .form-group a{
+    margin-left: -15px;
+}
