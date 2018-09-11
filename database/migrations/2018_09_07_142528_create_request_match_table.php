@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePostTable extends Migration
+class CreateRequestMatchTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,11 @@ class CreatePostTable extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('request_matchs', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('time');
-            $table->string('stadium');
-            $table->string('address');
-            $table->string('level');
-            $table->string('match');
-            $table->string('status')->nullable();
-            $table->text('note')->nullable();
             $table->integer('user_id')->unsigned();
-
-
+            $table->integer('post_id')->unsigned();
+            $table->integer('statust');
             $table->timestamps();
         });
     }
@@ -36,6 +29,6 @@ class CreatePostTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('post');
+        Schema::dropIfExists('request');
     }
 }

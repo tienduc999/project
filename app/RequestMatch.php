@@ -10,7 +10,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Request extends Model
+class RequestMatch extends Model
 {
     protected $table = 'posts';
 
@@ -21,5 +21,11 @@ class Request extends Model
         'post_id',
         'statust'
     ];
+    public function post(){
+        return $this->hasMany(Post::class,'Post_id','id');
+    }
+    public function user(){
+        return $this->hasMany(User::class,'user_id','id');
+    }
 
 }

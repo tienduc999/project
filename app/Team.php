@@ -26,5 +26,7 @@ class Team extends Model
         ' to_age',
         'about',
         'user_id'];
-
+    public function user(){
+        return $this->belongsTo(User::class,'user_id','id');
+    }
 }

@@ -42,7 +42,7 @@ class PostController extends Controller
 
     public function shows()
     {
-        $data = Post::join('user', 'post.user_id', '=', 'user.id')->get();
+        $data =Post::get();
 
         return view('component.Showposts.showposts', ['data' => $data]);
 

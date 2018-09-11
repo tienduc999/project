@@ -8,15 +8,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Request1;
+use App\RequestMatch;
 use Illuminate\Http\Request;
 
 ;
 
-class RequestController extends Controller
+class RequestMatchController extends Controller
 {
     public function store(Request $request)
     {
-        $product = new Request();
+        $product = new RequestMatch();
     }
 }

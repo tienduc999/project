@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePriceTable extends Migration
+class CreateAreaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,14 @@ class CreatePriceTable extends Migration
      */
     public function up()
     {
-        Schema::create('prices', function (Blueprint $table) {
+        Schema::create('areas', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer(    'number_of_users');
-            $table->integer('number_of_stadiums');
+            $table->integer('number_of_users');
             $table->string('start_time');
             $table->string('end_time');
             $table->string('calendar');
             $table->integer('price');
-            $table->integer('stadium_id');
+            $table->integer('stadium_id')->unsigned();
             $table->timestamps();
         });
     }

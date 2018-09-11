@@ -9,14 +9,14 @@
 namespace App\Http\Controllers;
 
 
-use App\Price;
+use App\Area;
 use Illuminate\Http\Request;
 
-class PriceController extends Controller
+class AreaController extends Controller
 {
     public function store(Request $request)
     {
-        $product = new Price();
+        $product = new Area();
 
         $product->number_of_users = $request->input('number_of_users');
         $product->number_of_stadiums = $request->input('number_of_stadiums');

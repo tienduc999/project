@@ -24,5 +24,16 @@ class User extends Model
         'email',
         'phone',
         'permissions'];
+    public function post(){
+        return $this->hasMany(Post::class,'user_id','id');
+    }
+
+    public function stadium(){
+        return $this->hasMany(Stadium::class,'user_id','id');
+    }
+
+    public function team(){
+        return $this->hasMany(Team::class,'user_id','id');
+    }
 
 }

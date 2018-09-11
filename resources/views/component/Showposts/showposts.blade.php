@@ -90,7 +90,7 @@
                                     <div class="header">
                                         <div class="match-header pull-left">
                                             <h5><strong>
-                                                <td>{!! $thongtin->last_name !!} {!! $thongtin->name !!}</td>
+                                                <td>{!! $thongtin->user->last_name !!} {!! $thongtin->user->name !!}</td>
                                                 <i class="glyphicon glyphicon-play"></i>{!! $thongtin->stadium !!}
                                                 </strong></h5>
                                         </div>

@@ -24,9 +24,9 @@ class CreateStadiumTable extends Migration
 
 
             $table->integer('phone');
-            $table->string('email');
-            $table->string('facebook');
-            $table->string('website');
+            $table->string('email')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('website')->nullable();
             $table->text('province_city')->nullable();
             $table->text('short_note')->nullable();
             $table->string('district')->nullable();
@@ -35,7 +35,6 @@ class CreateStadiumTable extends Migration
             $table->text('img')->nullable();
             $table->text('about')->nullable();
             $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('user')->ondelete('cascade');
 
             $table->timestamps();
         });

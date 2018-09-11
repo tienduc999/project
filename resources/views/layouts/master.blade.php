@@ -45,7 +45,7 @@
 
                         <li role="presentation"><a  role="menuitem" tabindex="-1" href="http://timkeonhanh.com/tao-doi"></a><a href=""><i
                                             class="fa fa-futbol-o"></i> Đội bóng của tôi</a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#"></a><a href=""><i
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#"></a><a href="http://timkeonhanh.com/dang-ki-san"><i
                                             class="fa fa-th-large"></i> Sân bóng của tôi</a></li>
                         <li role="presentation"><a role="menuitem" tabindex="-1" href="#"></a><a
                                         href="http://timkeonhanh.com/dangxuat"><i class="fa fa-sign-out" aria-hidden="true"></i>

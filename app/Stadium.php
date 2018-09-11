@@ -33,5 +33,11 @@ class Stadium extends Model
         'about',
         'user_id',
     ];
+    public function user(){
+        return $this->belongsTo(User::class,'stadium_id','id');
+    }
+    public function areas(){
+        return $this->hasMany(Area::class,'areas_id','id');
+    }
 
 }

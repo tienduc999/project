@@ -1,7 +1,6 @@
 @extends('layouts.master')
 
 @section('title', 'Page Title')
-
 @section('conter')
     <div class="conter">
 

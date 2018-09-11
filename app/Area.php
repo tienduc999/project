@@ -11,19 +11,20 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Price extends Model
+class Area extends Model
 {
-    protected $table = 'posts';
+    protected $table = 'areas';
 
     protected $fillable = [
         'id',
         'number_of_users',
-        'number_of_stadiums',
         'start_time',
         'end_time',
         'calendar',
         'price',
         'stadium_id'
     ];
-
+    public function stadium(){
+        return $this->belongsTo(Stadium::class,'stadium_id','id');
+    }
 }

@@ -3,27 +3,51 @@
 Route::get('/', function () {
     return view('welcome');
 });
-//Route::group(['prefix'=>'admin'],function (){
-//    Route::get();
-//});
+Route::group(['prefix' => '/Admin'], function () {
 
-Route::get('query/join', function () {
-    $data=DB::table('post')->join('user_account','post.user_id','=','user_account.id')->get();
-    dd($data);
-    ;
+    Route::group(['prefix' => '/quan-ly-nguoi-dung'],function (){
+        Route::get('shows','AccountController@show');
+        Route::get('delete','AccountController@delete');
+        Route::get('edit','AccountController@edit');
+
+    });
+
+    Route::group(['prefix' => '/quan-ly-bai-viet'],function (){
+        Route::get('shows','PostController@show');
+        Route::get('delete','PostController@delete');
+
+    });
+    Route::group(['prefix' => '/quan-ly-sân bóng'],function (){
+        Route::get('shows','PostController@show');
+        Route::get('delete','   @delete');
+
+    });
 
 });
 
-Route::get('dangki', function () {
-    return view('layout.dang-ki');
-});
+//trang chủ
+Route::get('/trangchu', 'AccountController@homePage')->name('trangchu');
 //tạo tài khoan
-Route::post('/dangki', 'AccountController@dangKy');
+Route::post('/dangki', 'AccountController@store');
+
+// chỉnh sửa thông tin
+
+Route::group(['prefix' => '/user'], function () {
+
+    Route::get('/updataUser', 'AccountController@updataUser');
+    Route::post('/updataUser/edit', 'AccountController@edit');
+    Route::get('/pageUpdate', 'AccountController@pageUpdate')->name('update');
+    Route::post('/update', 'AccountController@update');
+});;
+//đăng nhập tài khoản
+
+Route::post('/logIn', 'AccountController@logIn')->name('logIn');
+
+Route::get('dangxuat', 'AccountController@logOut');
+
 
 //sửa tài khoan
 Route::post('/update/{id}', 'AccountController@update');
-
-
 
 
 Route::get('/formUpDataPost/{id}', 'PostController@formUpData');
@@ -34,51 +58,33 @@ Route::get('hienthi', function () {
     return view('layout.trang-chu');
 });
 
-//đăng nhập tài khoản
-    Route::post('/logIn', 'AccountController@logIn')->name('logIn');
 
-Route::get('dangxuat','AccountController@logOut' );
-
-
-
-//trang chu
-Route::get('/trangchu', 'AccountController@homePage')->name('trangchu');
 
 //profile
 Route::get('user/profile', 'AccountController@account')->name('user/profile');
 
 
-
-
-// chỉnh sửa thông tin
-
-Route::get('user/updataUser', 'AccountController@updataUser');
-Route::post('user/updataUser/edit', 'AccountController@editAccount');
-// chỉnh sửa mật khảu
-Route::get('user/pageUpdate', 'AccountController@pageUpdate')->name('update');
-Route::post('user/update', 'AccountController@update');
-
 //post bài
-    Route::get('post', function () {
+Route::get('post', function () {
 
     return view('component.post.post');
 
 });
 //post bai
-    Route::post('/postbai', 'PostController@post');
+Route::post('/postbai', 'PostController@post');
 
 
 //hiển thị danh sách
-    Route::get('/tim-doi-da-bong', 'PostController@shows')->name('show');
+Route::get('/tim-doi-da-bong', 'PostController@shows')->name('show');
 
-    Route::get('/show', function () {
-        return view('component.Showposts.showposts');
-    });
+Route::get('/show', function () {
+    return view('component.Showposts.showposts');
+});
 
-    //tạo đội
-    Route::get('/tao-doi', function () {
-        return view('component.Createteam.createteam');
-    });
+//tạo đội
+Route::get('/tao-doi', function () {
+    return view('component.Createteam.createteam');
+});
 Route::post('/tao-doi/createInFormation', 'TeamInFormationController@createInFormation');
 Route::get('/Danh-sach-doi', 'TeamInFormationController@information');
 Route::get('/Danh-sach-doi1', function () {
@@ -90,4 +96,9 @@ Route::get('/dang-ki-san', function () {
     return view('component.stadium.store');
 });
 // bắt đội
-Route::get('/bắt đội/{id}', function (){});
+Route::get('/bắt đội/{id}', function () {
+});
+///////////////////////////
+///
+Route::get('/thi', 'ThiController@thi');
+Route::get('/thi1', 'ThiController@user');

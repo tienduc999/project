@@ -10,7 +10,7 @@ use Illuminate\Support\ViewErrorBag;
 
 class AccountController extends Controller
 {
-    public function dangKy(Request $request)
+    public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
             'account' => 'required|min:6|max:255',
@@ -76,6 +76,7 @@ class AccountController extends Controller
     }
     public function update(Request $request)
     {
+
         $validator = Validator::make($request->all(), [
             'password' => 'required',
             'newPassword' => 'required|min:6|max:15',
@@ -96,10 +97,11 @@ class AccountController extends Controller
 
         $thongTin = User::where('id', $id)->first();
         if ($validator->fails()){
+
             return redirect()->route('update')->withErrors($validator);
         }
-        if (  $request->input('password')!=$thongTin->password) {
 
+        if (  $request->input('password')!=$thongTin->password) {
             $validator = $validator->getMessageBag()->add('password', 'mật khẩu không đúng');
         }
         if ($request->input('newPassword') != $request->input('ConfirmPassword')) {
@@ -113,9 +115,10 @@ class AccountController extends Controller
             ]);
             return redirect()->route('user/profile');
         }
+            return redirect()->route('update')->withErrors($validator);
 
     }
-    public function editAccount(Request $request){
+    public function edit(Request $request){
         $thongTin = User::where('id', Session::get('id'))->first();
 
         $thongTin->update([
